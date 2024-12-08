@@ -6,7 +6,8 @@ import CallModal from "./components/modals/CallModal";
 function App() {
   return (
     <>
-      <CallModal />
+      {/* <CallModal /> */}
+      <ClickCounter />
     </>
   );
 }
