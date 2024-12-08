@@ -8,6 +8,7 @@ function App() {
     <>
       {/* <CallModal /> */}
       <ClickCounter />
+      <HoverCounter />
     </>
   );
 }
