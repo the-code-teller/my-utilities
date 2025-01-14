@@ -1,8 +1,6 @@
+import React from "react";
 import "./App.css";
-import Budget from "./components/Budget";
-import ClickCounter from "./components/hocExample/ClickCounter";
-import HoverCounter from "./components/hocExample/HoverCounter";
-import CallModal from "./components/modals/CallModal";
+import { Budget, PasswordGenerator } from "./components";
 
 function App() {
   return (
@@ -10,7 +8,16 @@ function App() {
       {/* <CallModal /> */}
       {/* <ClickCounter /> */}
       {/* <HoverCounter /> */}
+      {/* <React.StrictMode> */}
       <Budget />
+      {/* <BgChanger /> */}
+      {/* <CurrencyConverter /> */}
+      <PasswordGenerator />
+      {/* </React.StrictMode> */}
+      {/* <React.Fragment> */}
+      {/* <ConsumptionManager /> */}
+      {/* <LazyThirdPartyComponent /> */}
+      {/* </React.Fragment> */}
     </>
   );
 }
