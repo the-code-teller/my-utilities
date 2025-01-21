@@ -1,6 +1,5 @@
 import React from "react";
-import IconDelete from "../icons/IconDelete";
-import IconEdit from "../icons/IconEdit";
+import { IconDelete, IconEdit } from "../commons/icons";
 
 const TransactionTile = ({ transaction }) => {
   const {
@@ -28,7 +27,9 @@ const TransactionTile = ({ transaction }) => {
       <div className="flex justify-between items-center text-md text-gray-600 italic mb-1">
         <p>{planned === "yes" ? "Planned" : "Unplanned"}</p>
         {transactionType === "expense" && <p>{expenseType}</p>}
-        <h4 className="font-semibold capitalize not-italic">{transactionType}</h4>
+        <h4 className="font-semibold capitalize not-italic">
+          {transactionType}
+        </h4>
       </div>
       <p className="text-xs text-gray-600 mb-1">{description}</p>
       <div className="flex justify-between items-center">
