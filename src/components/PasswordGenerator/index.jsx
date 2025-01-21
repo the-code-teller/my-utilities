@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
+import { camelcaseToTitleConverter } from "../../utils";
 import Button from "../commons/Button";
-import usePasswordGenerator from "./usePasswordGenerator";
 import { InputBox, InputCheckbox, InputRange } from "../commons/inputs";
+import Modal from "../commons/Modal";
+import usePasswordGenerator from "./usePasswordGenerator";
 
 const PasswordGenerator = () => {
   const [showCopied, setShowCopied] = useState(false);
@@ -55,47 +57,52 @@ const PasswordGenerator = () => {
   }, [length, inclusions, generatePassword]);
 
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-500">
-      <div className=" md:w-1/2 sm:rounded-lg p-4 sm:mt-4 bg-white">
-        <div className="flex mb-4">
-          <InputBox
-            type="text"
-            value={password}
-            className="rounded-l-lg"
-            readOnly
-            ref={inputRef}
-          />
-          <Button
-            type="button"
-            onClick={handleCopy}
-            className="rounded-r-lg bg-blue-500 border-blue-500 w-24"
-            value={showCopied ? "Copied!" : "Copy"}
-          />
-        </div>
-        <div className="items-center gap-4">
-          <InputRange
-            label={`Length: ${length}`}
-            min={4}
-            max={20}
-            value={length}
-            onChange={setLength}
-            className="text-orange-300"
-          />
-          <div className="flex gap-4">
-            {Object.keys(inclusions).map((key) => (
+    <Modal
+      isOpen={true}
+      onClose={() => {}}
+      title="Password Generator"
+      className="text-2xl font-semibold text-blue-500 border-b border-blue-500"
+    >
+      <div className="flex mb-4">
+        <InputBox
+          type="text"
+          value={password}
+          className="border border-gray-300 p-2 w-full rounded-l-lg text-gray-500"
+          readOnly
+          ref={inputRef}
+        />
+        <Button
+          type="button"
+          onClick={handleCopy}
+          className="rounded-r-lg bg-blue-500 border-blue-500 text-white w-24"
+          value={showCopied ? "Copied!" : "Copy"}
+        />
+      </div>
+      <div className="items-center gap-4">
+        <InputRange
+          label={`Length: ${length}`}
+          min={4}
+          max={20}
+          value={length}
+          onChange={setLength}
+          className="text-blue-500"
+        />
+        <div className="flex flex-col sm:flex-row sm:gap-4">
+          {Object.keys(inclusions).map((key) => {
+            return (
               <InputCheckbox
                 key={key}
                 name={key}
-                label={key}
+                label={camelcaseToTitleConverter(key)}
                 checked={inclusions[key].include}
                 onChange={handleInclusionChange}
-                className="text-orange-300"
+                className="text-blue-500"
               />
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </Modal>
   );
 };
 
