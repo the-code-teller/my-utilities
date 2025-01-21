@@ -16,7 +16,7 @@ const InputBox = forwardRef(({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className={`border border-gray-300 p-2 w-full focus:outline-none ${className}`}
+      className={`focus:outline-none ${className}`}
       readOnly={readOnly}
       ref={ref}
     />
