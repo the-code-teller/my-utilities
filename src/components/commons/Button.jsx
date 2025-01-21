@@ -6,10 +6,10 @@ const Button = ({ type, className, backgroundColor, onClick, value }) => {
       onClick={(e) => onClick(e.target.value)}
       value={value}
       type={type}
-      className={`border rounded-2xl w-24 text-gray-100 ${className}`}
+      className={className}
       style={{ backgroundColor }}
     >
-      {value.toUpperCase()}
+      {value}
     </button>
   );
 };
