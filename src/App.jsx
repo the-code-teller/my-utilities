@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { PasswordGenerator, ConsumptionManager, CurrencyConverter } from "./components";
+import { PasswordGenerator, ConsumptionManager } from "./components";
 
 function App() {
   return (
