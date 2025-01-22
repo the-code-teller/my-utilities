@@ -31,9 +31,10 @@ const BgChanger = () => {
             type="button"
             backgroundColor={color}
             onClick={() => setBgColor(color)}
-            value={color.toUpperCase()}
             className="rounded-2xl w-24 border text-gray-100"
-          />
+          >
+            {color.toUpperCase()}
+          </Button>
         ))}
       </div>
     </div>
