@@ -75,8 +75,9 @@ const PasswordGenerator = () => {
           type="button"
           onClick={handleCopy}
           className="rounded-r-lg bg-blue-500 border-blue-500 text-white w-24"
-          value={showCopied ? "Copied!" : "Copy"}
-        />
+        >
+          {showCopied ? "Copied!" : "Copy"}
+        </Button>
       </div>
       <div className="items-center gap-4">
         <InputRange
