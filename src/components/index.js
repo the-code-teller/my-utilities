@@ -1,11 +1,13 @@
 import BgChanger from "./BgChanger";
 import Budget from "./Budget";
-import PasswordGenerator from "./PasswordGenerator";
 import ConsumptionManager from "./ConsumptionManager";
+import CurrencyConverter from "./CurrencyConverter";
+import PasswordGenerator from "./PasswordGenerator";
 
 export {
   BgChanger,
   Budget,
-  PasswordGenerator,
   ConsumptionManager,
+  CurrencyConverter,
+  PasswordGenerator,
 };

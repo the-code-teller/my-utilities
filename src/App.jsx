@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { PasswordGenerator, ConsumptionManager } from "./components";
+import { CurrencyConverter } from "./components";
 
 function App() {
   return (
@@ -11,8 +11,9 @@ function App() {
       {/* <React.StrictMode> */}
       {/* <Budget /> */}
       {/* <BgChanger /> */}
-      {/* <CurrencyConverter /> */}
-      <PasswordGenerator />
+      <CurrencyConverter />
+      {/* <ShowButton /> */}
+      {/* <PasswordGenerator /> */}
       {/* <CurrencyConverter /> */}
       {/* </React.StrictMode> */}
       {/* <React.Fragment> */}
